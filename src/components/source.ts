@@ -96,7 +96,7 @@ function updateSource<SourceT extends ISource>(
 /* eslint-enable complexity */
 
 function Source<SourceT extends ISource>(props: SourceProps<SourceT>) {
-  const map = useContext(MapContext).map.getMap();
+  const map = useContext(MapContext)?.map.getMap();
   const propsRef = useRef(props);
   const [, setStyleLoaded] = useState(0);
 
